@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Details</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3e6f7; /* Soft lilac background */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 1;
+        }
+        h1 {
+            color: #8a2be2; /* Lilac color for heading */
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #6a1b9a; /* Slightly darker lilac for subheading */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #8a2be2; /* Lilac background for table headers */
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f7e6fc; /* Lighter lilac for even rows */
+        }
+        a {
+            display: inline-block;
+            margin: 10px 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #ab47bc; /* Lilac button color */
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        a:hover {
+            background-color: #9c27b0; /* Darker lilac for hover effect */
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello Everyone</h1>
+    <h2>Product Details</h2>
+
+    <table>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Category</th>
+            <th>Product Price</th>
+            <th>Product Sales</th>
+        </tr>
+        {% for p in products %}
+        <tr>
+            <td>{{ p.name }}</td>
+            <td>{{ p.category }}</td>
+            <td>{{ p.price }}</td>
+            <td>{{ p.sales }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/addp" type="button">ADD PRODUCT</a>
+    <a href="/" type="button">GO HOME</a>
+</body>
+</html>

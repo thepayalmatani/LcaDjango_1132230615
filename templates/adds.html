@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Added</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3e6f7; /* Soft lilac background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        h1 {
+            color: #8a2be2; /* Lilac color for heading */
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+
+        /* Button Styles */
+        a {
+            display: inline-block;
+            margin: 15px;
+            padding: 12px 25px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #ab47bc; /* Lilac button color */
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #9c27b0; /* Darker lilac for hover effect */
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        a:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+            a {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Added Successfully</h1>
+    <a href="/plist" type="button">Display List</a><br>
+    <a href="/addp" type="button">Add Product</a><br>
+    <a href="/" type="button">Home Page</a><br>
+</body>
+</html>

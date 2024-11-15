@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3e6f7; /* Soft lilac background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        h1 {
+            color: #8a2be2; /* Lilac color for heading */
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .mb-3 {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #6a1b9a; /* Darker lilac for labels */
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #ab47bc; /* Lilac button color */
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #9c27b0; /* Darker lilac for hover effect */
+        }
+        a {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #ab47bc; /* Lilac for links */
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #9c27b0; /* Darker lilac for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Product</h1>
+    <form method="POST" class="mt-4">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name">Name</label>
+            {{ form.name }}
+        </div>
+        <div class="mb-3">
+            <label for="category">Category</label>
+            {{ form.category }}
+        </div>
+        <div class="mb-3">
+            <label for="price">Price</label>
+            {{ form.price }}
+        </div>
+        <div class="mb-3">
+            <label for="sales">Sales</label>
+            {{ form.sales }}
+        </div>
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+    <br>
+    <a href="/plist" type="button">SEE LIST</a><br>
+    <a href="/" type="button">GO HOME</a><br>
+</body>
+</html>
